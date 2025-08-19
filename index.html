@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<title>Kilala</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<link rel="stylesheet" href="assets/css/effect-expo.min.css">
+<link rel="stylesheet" href="assets/css/test.css">
+
+<body>
+
+    <section class="slide-banner">
+        <div class="swiper swiper-expo" style="--expo-image-offset: 1.125; --expo-padding: 63px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="expo-container">
+                <img class="swiper-slide-bg-image expo-image" src="assets/demo-images/gradients/01.jpg" />
+                <div class="swiper-slide-content expo-content">
+                  <div class="swiper-slide-text expo-text">Slide 1</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="expo-container">
+                <img class="swiper-slide-bg-image expo-image" src="assets/demo-images/gradients/02.jpg" />
+                <div class="swiper-slide-content expo-content">
+                  <div class="swiper-slide-text expo-text">Slide 2</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="expo-container">
+                <img class="swiper-slide-bg-image expo-image" src="assets/demo-images/gradients/03.jpg" />
+                <div class="swiper-slide-content expo-content">
+                  <div class="swiper-slide-text expo-text">Slide 3</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="expo-container">
+                <img class="swiper-slide-bg-image expo-image" src="assets/demo-images/gradients/04.jpg" />
+                <div class="swiper-slide-content expo-content">
+                  <div class="swiper-slide-text expo-text">Slide 4</div>
+                </div>
+              </div>
+            </div>
+       
+          </div>
+      
+          <!-- Pagination + Navigation -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script type="module" src="assets/js/swiper-effect-expo.js"></script>
+    
+    <script type="module">
+      import SwiperEffectExpo from "/assets/js/swiper-effect-expo.js";
+
+      Swiper.use([SwiperEffectExpo]);
+
+      const swiper = new Swiper(".swiper-expo", {
+        effect: "expo",
+        loop: true,
+        speed: 1500,
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 10,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        expoEffect: {
+          rotate: 0,
+          scale: 0,
+          imageScale: 0,
+          grayscale: false,
+        },
+      });
+    </script>
+</body>
+
+</html>
