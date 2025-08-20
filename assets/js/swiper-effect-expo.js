@@ -73,7 +73,7 @@ export default function SwiperEffectExpo({ swiper, on, extendParams }) {
        
         let translateY = -limitedProgress * 10 * direction; 
 
-        // Nếu slide rời đi, cho nó đi tiếp lên trên
+        
         if (limitedProgress > 0) {
             translateY = limitedProgress * 10 * direction; 
         }
